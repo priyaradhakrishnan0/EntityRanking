@@ -1,3 +1,4 @@
+<pre>
 EntityRanking
 =============
 README
@@ -24,6 +25,7 @@ python  evalLabeller.py
 //Time variant features
  java -jar FeatureVectorCreator.jar train camera $file none none time
 
+
 3. Run - predict labels
 TRAIN
 mallet-2.0.7$ java -cp "/home/priya/Desktop/Tools/mallet-2.0.7/class://home/priya/Desktop/Tools/mallet-2.0.7/lib/mallet-deps.jar" cc.mallet.fst.SimpleTagger
@@ -40,6 +42,7 @@ java -jar ResultAnalyzer.jar <true label file> <predicted label file>
 src
 dataset =  getNewModel.sh
 labelling = evalLabeller.py
+</pre>
 
 
 
