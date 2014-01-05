@@ -8,22 +8,22 @@ src - amazon.sh
 
 2. Preprocess - create feature vector
 
-java -jar FeatureVectorCreator.jar train/test/label camera/EVALUATION $file debug/none eval/none time/none
+java -jar FeatureVector.jar train/test/label camera/EVALUATION $file debug/none eval/none time/none
 
 //TRAIN
-java -jar FeatureVectorCreator.jar train camera $file none none none
+java -jar FeatureVector.jar train camera $file none none none
 //TEST
-java -jar FeatureVectorCreator.jar test camera $file none none none
+java -jar FeatureVector.jar test camera $file none none none
 //LABEL TRAIN_TEST
-java -jar FeatureVectorCreator.jar label camera $file none none none
+java -jar FeatureVector.jar label camera $file none none none
 
 //EVALUATION test 
-java -jar FeatureVectorCreator.jar test EVALUATION $file none none none
+java -jar FeatureVector.jar test EVALUATION $file none none none
 //EVALUATION label
 python  evalLabeller.py
 
 //Time variant features
- java -jar FeatureVectorCreator.jar train camera $file none none time
+ java -jar FeatureVector.jar train camera $file none none time
 
 
 3. Run - predict labels

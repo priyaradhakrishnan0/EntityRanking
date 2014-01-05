@@ -1,4 +1,4 @@
-package Versioning;
+package Version2;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,14 +7,11 @@ import java.util.ArrayList;
 
 public class ResultAnalyzer {
 
-	String inPath = "/home/priya/Desktop/EntityRanking";//for local machine
+	String inPath = "/home/priya/Desktop/EntityRanking/version2.0";//for local machine
 	public static void main(String[] args) {
 		ResultAnalyzer ra = new ResultAnalyzer();
 		String read;
 		int idx = 0;
-
-		//category is i/p cluster type
-		
 		String labelFile1 = ra.inPath+"/"+args[0];
 		String labelFile2 = ra.inPath+"/"+args[1];
 		
@@ -109,7 +106,7 @@ public class ResultAnalyzer {
 //			System.out.println("VB = "+version_brand+", VP = "+version_product+", VV = "+version_version+", VN = "+version_na);
 //			System.out.println("NB = "+na_brand+", NP = "+na_product+", NV = "+na_version+", NN = "+na_na);
 		
-			/*fourBYfour start
+			///*fourBYfour start
 			double rB = (double) brand_brand / (brand_brand + brand_product + brand_version + brand_na) ;
 			double pB = (double) brand_brand / (brand_brand + product_brand + version_brand + na_brand);
 			double fB = 2 * pB * rB / (pB + rB);
@@ -132,9 +129,9 @@ public class ResultAnalyzer {
 			System.out.println(" *na* P = "+pN+", R = "+rN+", F = "+fN);
 			
 			System.out.println(pB+","+rB+","+fB+", ,"+pP+","+rP+","+fP+", ,"+pV+","+rV+","+fV+", ,"+pN+","+rN+","+fN);
-			//fourBYfour end*/ 
+			//fourBYfour end*/
 			
-			///*threeBythree - strat
+			/*threeBythree - strat
 			double rB = (double) brand_brand / (brand_brand + brand_product + brand_version + brand_na) ;
 			double pB = (double) brand_brand / (brand_brand + product_brand + version_brand + na_brand);
 			double fB = 2 * pB * rB / (pB + rB);
