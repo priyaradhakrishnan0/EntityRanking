@@ -3,8 +3,7 @@ EntityRanking
 =============
 README
 -------------------------------------------
-1. input dataset = amazon web crawl
-src - amazon.sh
+1. input dataset = http://tinyurl.com/oswmvay
 
 2. Preprocess - create feature vector
 
@@ -16,15 +15,6 @@ java -jar FeatureVector.jar train camera $file none none none
 java -jar FeatureVector.jar test camera $file none none none
 //LABEL TRAIN_TEST
 java -jar FeatureVector.jar label camera $file none none none
-
-//EVALUATION test 
-java -jar FeatureVector.jar test EVALUATION $file none none none
-//EVALUATION label
-python  evalLabeller.py
-
-//Time variant features
- java -jar FeatureVector.jar train camera $file none none time
-
 
 3. Run - predict labels
 TRAIN
@@ -39,9 +29,8 @@ java -jar ResultAnalyzer.jar <true label file> <predicted label file>
 //java -jar ResultAnalyzer.jar camera_label_t6_1 camera_label_t6_2
 
 5. Evaluation 
-src
-dataset =  getNewModel.sh
-labelling = evalLabeller.py
+java -jar OrderEvaluator.jar <brand> <version>
+//java -jar OrderEvaluator kodak easyshare
 </pre>
 
 
