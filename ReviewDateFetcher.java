@@ -25,7 +25,9 @@ public class ReviewDateFetcher {
 			    if(lastPageUrl != null){
 			    	System.out.println("Fetched last rview page "+lastPageUrl);
 			    	System.out.println("rrDate = "+rdFetcher.revDate(lastPageUrl));
-			    }			    			       
+			    } else {
+			    	System.out.println("rrDate = "+rdFetcher.revDate(url));
+			    }
 		    }//End main
 		    
 		    public String lastPage(String url){
@@ -89,8 +91,7 @@ public class ReviewDateFetcher {
 							earliestDate = dateList.get(0); 							
 							Calendar calendar0 = Calendar.getInstance();
 							Calendar calendar1 = Calendar.getInstance();
-							for(int i=1; i< dateList.size(); ++i){
-								//System.out.println(dateList.get(i));
+							for(int i=1; i< dateList.size(); ++i){ //System.out.println(dateList.get(i));
 								d0 = format.parse(earliestDate);
 								d1 = format.parse(dateList.get(i));
 						        calendar0.setTime(d0);  
