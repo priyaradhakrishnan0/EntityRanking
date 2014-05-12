@@ -1,6 +1,6 @@
 README
 -------------------------------------------
-This software is the implementation of the paper "Predicting Previous Version of a Product Entity" published at SIGIR'14.  This paper describes a two step approach to solve the problem of predicting the predecessor version of a given query product version.
+This software is the implementation of the paper "Modeling the Evolution of Product Entities " published at SIGIR'14.  This paper describes a two step approach to solve the problem of predicting the predecessor version of a given query product version.
 A) parsing the product title, and (B) predicting the predecessor version given all candidates.
 
 Step A:
@@ -38,8 +38,14 @@ Step B:
 
 4. Evaluate Precision, Recall and F measure  using Naive Bayes Classifier
 -------------------------------------------------------------------------------------
-Kindly cite the paper if you are using the software 
-
+Kindly cite the paper as follows if you are using the software 
+@inproceedings{radhakrishnan14_sigir,
+ title={{Modeling the Evolution of Product Entities}},
+ author={Radhakrishnan, Priya and Gupta, Manish and Varma, Vasudeva},
+ booktitle={{Proc. of the $37^{th}$ Annual Intl. ACM SIGIR Conf. (SIGIR)}},
+ pages={},
+ year={2014}
+}
 
 
 
